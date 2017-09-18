@@ -1,6 +1,7 @@
 # User Credentials
 test_pylast.yaml
 .envrc
+mylast.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

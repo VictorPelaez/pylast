@@ -2172,10 +2172,12 @@ class TestPyLast(unittest.TestCase):
             )
         except pylast.WSError as exc:
             msg = str(exc)
+            id = exc.get_id()
 
         # Assert
         self.assertEqual(msg,
                          "Unauthorized Token - This token has not been issued")
+        self.assertEqual(id, pylast.STATUS_AUTH_FAILED)
 
 
 @flaky(max_runs=5, min_passes=1)

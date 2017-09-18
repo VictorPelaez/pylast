@@ -1576,7 +1576,7 @@ class WSError(Exception):
     """Exception related to the Network web service"""
 
     def __init__(self, network, status, details):
-        self.status = status
+        self.status = int(status)
         self.details = details
         self.network = network
 
